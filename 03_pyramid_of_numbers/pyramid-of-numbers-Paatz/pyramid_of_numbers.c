@@ -94,7 +94,7 @@ void print_big_int(const struct BigInt *big_int)
 */
 int multiply(const struct BigInt *big_int ,int factor ,struct BigInt *big_result,int number)
 {
-	int result2 = number * factor ;
+	long int result2 = number * factor ;
 	double result = number * factor;
 	int stop = 0 ;
 
@@ -203,7 +203,7 @@ int main(int argc, char *argv[])
 		number = multiply(&big_int ,i ,&big_result ,number);
 	}
 
-	for(int r = 9 ;r > 1 ;r--)
+	for(int r = 2 ;r < 10 ;r++)
 	{
 		number = divide(&big_int ,r ,&big_result ,number);
 	}
